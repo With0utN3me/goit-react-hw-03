@@ -1,0 +1,21 @@
+.options-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    width: 500px;
+}
+.options-button{
+    font-size: 21px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 0 0 whitesmoke,
+    4px 4px 0 0 black;
+    transition-duration: 200ms;
+    background-color: rgb(214, 211, 211);
+}
+.options-button:hover{
+    box-shadow: 3px 3px whitesmoke, 6px 6px 0 0 black;
+    transform: translate(2px, -2px);
+}

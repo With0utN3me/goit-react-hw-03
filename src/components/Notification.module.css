@@ -1,0 +1,8 @@
+.feedback-p{
+    font-size: 30px;
+    font-weight: 550;
+    color: rgb(230, 142, 65);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-top: 10px;
+}

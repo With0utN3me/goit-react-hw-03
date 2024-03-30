@@ -1,0 +1,30 @@
+.feedback-list{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.feedback-list-item{
+    text-align: left;
+    width: 500px;
+    font-size: 20px;
+    border-top: 2px solid black;
+    padding-left: 8px;
+}
+.feedback-list-item:first-child{
+    border-top: none;
+    background-color: rgba(126, 252, 0, 0.6);
+}
+.feedback-list-item:nth-child(2){
+    background-color: rgba(128, 128, 128, 0.6);
+}
+.feedback-list-item:nth-child(3){
+    background-color: rgba(225, 35, 73, 0.6);
+}
+.feedback-list-item:nth-child(4), .feedback-list-item:nth-child(5){
+    background-color: rgba(127, 255, 212, 0.6);
+}

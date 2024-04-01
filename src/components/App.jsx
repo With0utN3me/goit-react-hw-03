@@ -1,7 +1,8 @@
 import './App.css'
 import { useState, useEffect } from 'react';
-import ContactList from './ContactList';
-import SearchBox from './SearchBox';
+import ContactList from './Contacts/ContactList';
+import SearchBox from './Search/SearchBox';
+import ContactForm from "./Form/ContactForm"
 
 const App = () => {
   const [contacts, setContacts] = useState([
@@ -12,18 +13,34 @@ const App = () => {
     ]);
   const [filter, setFilter] = useState('');
     
+  const addContacts = (newContact) => {
+    setContacts((prevContacts) => {
+      return [...prevContacts, newContact];
+    });
+  };
+
+  const deleteContacts = (contactId) => {
+    setContacts((prevContacts) => {
+      return prevContacts.filter((contact) => contact.id !== contactId);
+    });
+  };
+
   const visibleContacts = contacts.filter((contact) => 
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
   return(
     <div>
       <h1>Phonebook</h1>
+      <ContactForm
+        onAdd = {addContacts}
+      />
       <SearchBox
         value = {filter}
         onFilter = {setFilter}
       />
       <ContactList
-        contacts={visibleContacts}
+        contacts = {visibleContacts}
+        onDelete = {deleteContacts}
       />
     </div>)
 }

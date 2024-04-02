@@ -57,9 +57,9 @@ const App = () => {
       />
   {visibleContacts.length === 0 ? (
     contacts.length !== 0 ? (
-      <Notification/>) :
+      <Notification text = {"There are no contacts matching your request."}/>) :
       <>
-        <Notification/>
+        <Notification text = {"There are no contacts yet, but you can add new one's!"}/>
         <Resetbutton reset = {resetContacts}/>
       </>
     ) : <ContactList

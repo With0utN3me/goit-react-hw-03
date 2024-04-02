@@ -15,7 +15,7 @@ const standartContacts = [
 const App = () => {
   const [contacts, setContacts] = useState(() => {
     const savedContacts = window.localStorage.getItem("saved-contacts");
-    if(savedContacts.length !== 0) {
+    if(savedContacts !== null) {
       return JSON.parse(savedContacts);
     }
     return []});

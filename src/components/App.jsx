@@ -17,7 +17,8 @@ const App = () => {
     const savedContacts = window.localStorage.getItem("saved-contacts");
     if(savedContacts.length !== 0) {
       return JSON.parse(savedContacts);
-    }});
+    }
+    return []});
   const [filter, setFilter] = useState('');
     
   const addContacts = (newContact) => {
